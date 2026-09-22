@@ -1,0 +1,59 @@
+    1  pwd
+    2  touch first_file.txt
+    3  vim first_file.txt
+    4  ls -l first_file.txt
+    5  sed -n '1,5p' first_file.txt
+    6  ls -ld workshop 2>/dev/null || true
+    7  mkdir workshop
+    8  mkdir workshop/projects workshop/logs workshop/notes
+    9  touch workshop/projects/project1.txt
+   10  touch workshop/logs/activity.log
+   11  vim workshop/notes/ideas.txt
+   12  mv workshop/projects/project1.txt workshop/project1.txt
+   13  mv workshop/logs/activity.log workshop/logs/workshop.log
+   14  vim workshop/project1.txt
+   15  cp workshop/notes/ideas.txt workshop/ideas.txt
+   16  mkdir workshop/archive
+   17  mv workshop/ideas.txt workshop/archive/ideas.txt
+   18  rm workshop/notes/ideas.txt
+   19  rmdir workshop/projects
+   20  ls -R workshop
+   21  pwd
+   22  find workshop -print | sort
+   23  sed -n '1,10p' workshop/archive/ideas.txt
+   24  sed -n '1,10p' workshop/project1.txt
+   25  wc -c workshop/logs/workshop.log
+   26  ls -l first_file.txt
+   27  sed -n '1,3p' first_file.txt
+   28  ls
+   29  tree workshop/
+   30  cat workshop/project1.txt 
+   31  exit
+   32  cd homework4_compilation_units
+   33  pwd
+   34  ls -lh
+   35  ls -lh outputs
+   36  pwd | tee outputs/server_pwd.txt
+   37  uname -a | tee outputs/uname.txt
+   38  gcc --version | head -n 1 | tee outputs/gcc_version.txt
+   39  history 80 | tee outputs/command_history.txt
+   40  vim main.c
+   41  vim math_utils.c
+   42  vim math_utils.h
+   43  gcc -c main.c
+   44  gcc -c math_utils.c
+   45  gcc main.o math_utils.o -o square_prog
+   46  ./square_prog
+   47  nm main.o | tee outputs/nm_main_o.txt
+   48  nm math_utils.o | tee outputs/nm_math_utils_o.txt
+   49  nm square_prog | tee outputs/nm_square_prog.txt
+   50  objdump -d main.o | tee outputs/objdump_main_o.txt
+   51  objdump -d math_utils.o | tee outputs/objdump_math_utils_o.txt
+   52  objdump -d square_prog | tee outputs/objdump_square_prog.txt
+   53  readelf -h main.o | tee outputs/readelf_h_main_o.txt
+   54  readelf -h math_utils.o | tee outputs/readelf_h_math_utils_o.txt
+   55  readelf -h square_prog | tee outputs/readelf_h_square_prog.txt
+   56  readelf -S main.o | tee outputs/readelf_S_main_o.txt
+   57  readelf -S math_utils.o | tee outputs/readelf_S_math_utils_o.txt
+   58  readelf -S square_prog | tee outputs/readelf_S_square_prog.txt
+   59  history 120 | tee outputs/command_history.txt
