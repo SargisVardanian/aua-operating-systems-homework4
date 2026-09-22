@@ -1,0 +1,8 @@
+
+math_utils.o:     file format elf64-x86-64
+
+RELOCATION RECORDS FOR [.eh_frame]:
+OFFSET           TYPE              VALUE
+0000000000000020 R_X86_64_PC32     .text
+
+
