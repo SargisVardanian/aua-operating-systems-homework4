@@ -1,0 +1,4 @@
+   text	   data	    bss	    dec	    hex	filename
+    169	      0	      0	    169	     a9	main.o
+    107	      0	      0	    107	     6b	math_utils.o
+   1474	    600	      8	   2082	    822	square_prog
